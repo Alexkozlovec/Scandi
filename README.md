@@ -1,0 +1,2 @@
+# Scandi
+# Лендинг "SCANDI".
