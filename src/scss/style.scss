@@ -33,14 +33,25 @@ $breakpoints: (
   }
 }
 
-// @include font-face("Roboto", "../fonts/Roboto-Regular", 400);
+@include font-face("Montserrat", "../fonts/Montserrat-Regular", 400);
+@include font-face("Montserrat", "../fonts/Montserrat-Medium", 500);
 
 :root {
   --color-white: #fff;
   --color-black: #000;
+  --color-page-bg: #efe6e4;
+  --color-section-bg: #e2c4ba;
+  --color-section-bg-dark: #8d7370;
+  --color-text-primary: #533738;
+  --color-text-secondary: var(--color-white);
+  --color-text-light: #f6ede9;
 
-  // fonts
-  --font-primary: "Font", "Arial", sans-serif;
+  // font
+  --font-primary: "Montserrat", "Arial", sans-serif;
+  --font-size-primary: 18px;
+  --font-size-title: 40px;
+  --line-height-primary: 1.67;
+  --line-height-title: 1.25;
 
   // breakpoints
   --xs: 375px;
@@ -78,8 +89,8 @@ $breakpoints: (
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
-  color: #f00;
+  line-height: var(--line-height-primary);
+  color: var(--color-text-primary);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--color-white);
@@ -122,5 +133,5 @@ input {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1230px;
 }
