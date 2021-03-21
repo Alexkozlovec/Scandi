@@ -4,38 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="SCANDI – Студия интерьер-дизайна. Поможем сделать вашу квартиру уютнее!">
   <link rel="icon" href="images/favicons/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <title>SCANDI | Студия интерьер-дизайна</title>
 </head>
 <body class="page-body">
-  <!-- ======== BEGIN HEADER ======== -->
+  <!-- header -->
   <header class="page-header">
     <div class="container page-header__container">
-      <nav class="nav page-header__nav">
-        <a class="logo page-header__logo">
-          <img src="images/logo.svg" alt="Логотип scandi" class="logo__image">
-        </a>
 
+      <button class="nav__burger btn-burger" type="button">
+        <span class="btn-burger__line"></span>
+      </button>
+
+      <a class="logo page-header__logo">
+        <img src="images/logo.svg" alt="Логотип scandi" class="logo__image">
+      </a>
+
+      <nav class="nav page-header__nav">
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a href="#" class="link nav__link">О компании</a>
+            <a href="#about" class="link nav__link">О компании</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="link nav__link">Портфолио</a>
+            <a href="#portfolio" class="link nav__link">Портфолио</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="link nav__link">Команда</a>
+            <a href="#team" class="link nav__link">Команда</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="link nav__link">Как мы работаем</a>
+            <a href="#process" class="link nav__link">Как мы работаем</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="link nav__link">Отзывы клиентов</a>
+            <a href="#reviews" class="link nav__link">Отзывы клиентов</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="link nav__link">Оставить заявку</a>
+            <a href="#contact" class="link nav__link">Оставить заявку</a>
           </li>
         </ul>
 
@@ -43,64 +48,72 @@
       </nav>
     </div>
   </header>
-  <!-- ======== END HEADER ======== -->
+  <!-- /header -->
 
-  <!-- ======== BEGIN MAIN ======== -->
+  <!-- main -->
   <main class="page-main">
     <section class="hero">
       <div class="container hero__container">
-        <h1 class="title hero__title">
-          Поможем сделать вашу квартиру уютнее
-        </h1>
+        <div class="hero__content">
+          <h1 class="title hero__title" data-reveal="true">Поможем сделать вашу квартиру уютнее</h1>
 
-        <p class="desc hero__desc">
-          Подбираем текстиль, мебель и аксессуары
-          под ваш интерьер, находим магазины
-          и помогаем организовать доставку
-        </p>
+          <p class="desc hero__desc">
+            Подбираем текстиль, мебель и аксессуары
+            под ваш интерьер, находим магазины
+            <br>и помогаем организовать доставку
+          </p>
 
-        <a href="#" class="btn hero__cta">Оставить заявку</a>
+          <a href="#contact" class="btn hero__cta">Оставить заявку</a>
+        </div>
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="container about__container">
-        <h2 class="title about__title">
-          О нас
-        </h2>
+        <h2 class="title about__title" data-reveal="true">О нас</h2>
 
         <div class="about__content">
-          <img src="images/about-image.jpg" alt="Ваза на красиво накрытом столе" class="about__image">
+          <div class="about__image-wrapper">
+            <img src="images/about-image.jpg" alt="Ваза на красиво накрытом столе" class="about__image" data-reveal="true">
+          </div>
 
           <div class="about__text">
-            <p class="desc about__desc">
+            <p class="desc about__desc" data-reveal="true">
               Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры
               для наших дорогих клиентов, уделяя внимание мельчайшим деталям — вот то, что по-настоящему вдохновляет дизайнеров нашей
               студии.
             </p>
-            <p class="desc about__desc">
+            <p class="desc about__desc" data-reveal="true">
               Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам было приятно сказать:
               « Да! Это именно то, что действительно достойно моего дома!»
             </p>
           </div>
         </div>
-
-        <dl class="features about__features list-reset">
-          <dt class="feature features__feature">5</dt>
-          <dd class="feature__desc">Лет опыта</dd>
-          <dt class="feature features__feature">100</dt>
-          <dd class="feature__desc">Проектов</dd>
-          <dt class="feature features__feature">10</dt>
-          <dd class="feature__desc">Наград</dd>
-        </dl>
       </div>
     </section>
 
-    <section class="portfolio">
+    <section id="features" class="features">
+      <dl class="features__list container list-reset">
+        <div class="feature features__item" data-reveal="true">
+          <dt class="feature__term">5</dt>
+          <dd class="feature__desc">Лет опыта</dd>
+        </div>
+        <div class="feature features__item" data-reveal="true">
+          <dt class="feature__term">100</dt>
+          <dd class="feature__desc">Проектов</dd>
+        </div>
+        <div class="feature features__item" data-reveal="true">
+          <dt class="feature__term">10</dt>
+          <dd class="feature__desc">Наград</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="portfolio" class="portfolio">
       <div class="container portfolio__container">
-        <h2 class="title portfolio__title">Наши работы</h2>
+        <h2 class="title portfolio__title" data-reveal="true">Наши работы</h2>
         <ul class="portfolio-cases list-reset">
-          <li class="portfolio-case portfolio-cases__case">
+          <li class="portfolio-case portfolio-cases__case" tabindex="0" data-reveal="true">
             <img src="images/portfolio/portfolio-case-1.jpg" alt="Квартира студия 30 кв.м." class="portfolio-case__image">
             <div class="portfolio-case__about">
               <h3 class="portfolio-case__title">Квартира-студия 30 кв.м.</h3>
@@ -110,7 +123,7 @@
               </p>
             </div>
           </li>
-          <li class="portfolio-case portfolio-cases__case">
+          <li class="portfolio-case portfolio-cases__case" tabindex="0" data-reveal="true">
             <img src="images/portfolio/portfolio-case-2.jpg" alt="Пентхаус в светлых тонах" class="portfolio-case__image">
             <div class="portfolio-case__about">
               <h3 class="portfolio-case__title">Пентхаус в светлых тонах</h3>
@@ -120,7 +133,7 @@
               </p>
             </div>
           </li>
-          <li class="portfolio-case portfolio-cases__case">
+          <li class="portfolio-case portfolio-cases__case" tabindex="0" data-reveal="true">
             <img src="images/portfolio/portfolio-case-3.jpg" alt="Квартира-студия с яркими акцентами" class="portfolio-case__image">
             <div class="portfolio-case__about">
               <h3 class="portfolio-case__title">Квартира-студия с яркими акцентами</h3>
@@ -130,7 +143,7 @@
               </p>
             </div>
           </li>
-          <li class="portfolio-case portfolio-cases__case">
+          <li class="portfolio-case portfolio-cases__case" tabindex="0" data-reveal="true">
             <img src="images/portfolio/portfolio-case-4.jpg" alt="Ванная в скандинавском стиле" class="portfolio-case__image">
             <div class="portfolio-case__about">
               <h3 class="portfolio-case__title">Ванная в скандинавском стиле</h3>
@@ -146,9 +159,9 @@
       </div>
     </section>
 
-    <section class="team">
+    <section id="team" class="team">
       <div class="container team__container">
-        <h2 class="title team__title">Команда</h2>
+        <h2 class="title team__title" data-reveal="true">Команда</h2>
 
         <ul class="team__list list-reset">
           <li class="team-card team__item">
@@ -171,86 +184,150 @@
               Катя тоже занимается дизайном.
               Она всегда находит общий язык
               с клиентами и точно знает,
-              как обсутроить дом так, чтобы вам понравилось.
+              как обустроить дом так, чтобы вам понравилось.
             </p>
           </li>
         </ul>
+
+        <section id="process" class="process">
+            <h2 class="title process__title" data-reveal="true">Как мы работаем</h2>
+
+            <ol class="process__list list-reset">
+              <li class="process-card process__item">
+                <span class="process-card__step">1</span>
+                <p class="desc process-card__desc">
+                  Знакомимся, выезжаем
+                  на объект, утверждаем концепцию, подписывем договор.
+                </p>
+              </li>
+              <li class="process-card process__item">
+                <span class="process-card__step">2</span>
+                <p class="desc process-card__desc">
+                  Подбираем мебель, текстиль, аксессуры. Делаем 3D-
+                  зуализацию.
+                </p>
+              </li>
+              <li class="process-card process__item">
+                <span class="process-card__step">3</span>
+                <p class="desc process-card__desc">
+                  Находим нужные магазины, помогаем с доставкой
+                  и оплатой товаров.
+                </p>
+              </li>
+              <li class="process-card process__item">
+                <span class="process-card__step">4</span>
+                <p class="desc process-card__desc">
+                  Воплощаем проект в жизнь:
+                  расставляем мебель и цветы, вешаем шторы, находим места для мелочей
+                </p>
+              </li>
+            </ol>
+        </section>
       </div>
     </section>
 
-    <section class="process">
-      <div class="container process__container">
-        <h2 class="title process__title">
-          Как мы работаем
-        </h2>
-
-        <ol class="process__list list-reset">
-          <li class="process-card process__item">
-            <span class="process-card__step">1</span>
-            <p class="desc process-card__desc">
-              Знакомимся, выезжаем
-              на объект, утверждаем концепцию, подписывем договор.
-            </p>
-          </li>
-          <li class="process-card process__item">
-            <span class="process-card__step">2</span>
-            <p class="desc process-card__desc">
-              Подбираем мебель, текстиль, аксессуры. Делаем 3D-
-              зуализацию.
-            </p>
-          </li>
-          <li class="process-card process__item">
-            <span class="process-card__step">3</span>
-            <p class="desc process-card__desc">
-              Находим нужные магазины, помогаем с доставкой
-              и оплатой товаров.
-            </p>
-          </li>
-          <li class="process-card process__item">
-            <span class="process-card__step">4</span>
-            <p class="desc process-card__desc">
-              Воплощаем проект в жизнь:
-              расставляем мебель и цветы, вешаем шторы, находим места для мелочей
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="reviews">
+    <section id="reviews" class="reviews">
       <div class="container reviews__container">
-        <h2 class="title reviews__title">
-          Отзывы
-        </h2>
+        <h2 class="title reviews__title" data-reveal="true">Отзывы</h2>
 
-        <div class="review reviews__review">
-          <blockquote class="desc review__desc">
-            <p class="desc review__text">
-              «Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.
-            </p>
-            <p class="desc review__text">
-              Работа шла быстро, было очень приятно общаться и взаимодествовайть
-              с сотрудниками. Не ожидала, что это будет так легко!
-            </p>
-            <p class="desc review__text">
-              Буду советовать и своим друзьям к вам обращаться!»
-            </p>
+        <div class="glide reviews__slider">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="review reviews__review">
+                  <blockquote class="desc review__desc">
+                    <p class="desc review__text">
+                      «Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.
+                    </p>
+                    <p class="desc review__text">
+                      Работа шла быстро, было очень приятно общаться и взаимодествовайть
+                      с сотрудниками. Не ожидала, что это будет так легко!
+                    </p>
+                    <p class="desc review__text">
+                      Буду советовать и своим друзьям к вам обращаться!»
+                    </p>
 
-            <p class="review__author">Анна Беловская</p>
-          </blockquote>
+                    <p class="review__author">Анна Беловская</p>
+                  </blockquote>
 
-          <div class="review__gallery">
-            <img src="images/reviews/review-1-1.jpg" alt="Интерьер гостиной квартиры" class="review__image">
-            <img src="images/reviews/review-1-2.jpg" alt="Интерьер кухни квартиры" class="review__image">
+                  <div class="review__gallery">
+                    <img src="images/reviews/review-1-1.jpg" alt="Интерьер гостиной квартиры" class="review__image">
+                    <img src="images/reviews/review-1-2.jpg" alt="Интерьер кухни квартиры" class="review__image">
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="review reviews__review">
+                  <blockquote class="desc review__desc">
+                    <p class="desc review__text">
+                      «Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.
+                    </p>
+                    <p class="desc review__text">
+                      Работа шла быстро, было очень приятно общаться и взаимодествовайть
+                      с сотрудниками. Не ожидала, что это будет так легко!
+                    </p>
+                    <p class="desc review__text">
+                      Буду советовать и своим друзьям к вам обращаться!»
+                    </p>
+
+                    <p class="review__author">Анна Беловская</p>
+                  </blockquote>
+
+                  <div class="review__gallery">
+                    <img src="images/reviews/review-1-1.jpg" alt="Интерьер гостиной квартиры" class="review__image">
+                    <img src="images/reviews/review-1-2.jpg" alt="Интерьер кухни квартиры" class="review__image">
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="review reviews__review">
+                  <blockquote class="desc review__desc">
+                    <p class="desc review__text">
+                      «Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.
+                    </p>
+                    <p class="desc review__text">
+                      Работа шла быстро, было очень приятно общаться и взаимодествовайть
+                      с сотрудниками. Не ожидала, что это будет так легко!
+                    </p>
+                    <p class="desc review__text">
+                      Буду советовать и своим друзьям к вам обращаться!»
+                    </p>
+
+                    <p class="review__author">Анна Беловская</p>
+                  </blockquote>
+
+                  <div class="review__gallery">
+                    <img src="images/reviews/review-1-1.jpg" alt="Интерьер гостиной квартиры" class="review__image">
+                    <img src="images/reviews/review-1-2.jpg" alt="Интерьер кухни квартиры" class="review__image">
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="glide__arrows reviews-arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left reviews-arrows__arrow reviews-arrows__arrow--prev" data-glide-dir="<" aria-label="Предыдущий слайд">
+              <svg width="33" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.707 8.707a1 1 0 000-1.414L26.343.929a1 1 0 10-1.414 1.414L30.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h32V7H0v2z"
+                  fill="#F5F2ED" />
+              </svg>
+            </button>
+            <button class="glide__arrow glide__arrow--right reviews-arrows__arrow reviews-arrows__arrow--next" data-glide-dir=">" aria-label="Следующий слайд">
+              <svg width="33" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.707 8.707a1 1 0 000-1.414L26.343.929a1 1 0 10-1.414 1.414L30.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h32V7H0v2z"
+                  fill="#F5F2ED" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="container contact__container">
         <div class="contact__content">
-          <h2 class="title contact__title">Оставить заявку</h2>
+          <h2 class="title contact__title" data-reveal="true">Оставить заявку</h2>
           <p class="desc contact__desc">
             Оставьте свои контакты. Менеджер перезвонит
             в удобное вам время и ответит на все вопросы.
@@ -270,9 +347,9 @@
       </div>
     </section>
   </main>
-  <!-- ======== END MAIN ======== -->
+  <!-- /main -->
 
-  <!-- ======== BEGIN FOOTER ======== -->
+  <!-- footer -->
   <footer class="page-footer">
     <div class="container page-footer__container">
       <div class="page-footer__info">
@@ -280,12 +357,10 @@
         <address class="page-footer__address">г. Санкт-петербург, ул. Большая Конюшенная, 19</address>
       </div>
 
-      <p class="page-footer__meta">
-        ИП Королёва А.А.
-      </p>
+      <p class="page-footer__meta">ИП Королёва А.А.</p>
     </div>
   </footer>
-  <!-- ======== END FOOTER ======== -->
+  <!-- /footer -->
   <script src="scripts/app.js"></script>
 </body>
 </html>

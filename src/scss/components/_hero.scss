@@ -1,0 +1,72 @@
+.hero {
+  padding: 152px 0 90px;
+  min-height: 715px;
+  background-image: url("../../images/hero-bg.jpg");
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: padding-top var(--transition);
+
+  &__content {
+    padding-left: 84px;
+    transition: padding-left var(--transition);
+
+    @include mq(tablet-lg) {
+      padding-left: 42px;
+    }
+
+    @include mq(tablet) {
+      padding-left: 30px;
+      width: 80%;
+    }
+
+    @include mq(small) {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    @include mq(smaller) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 23px;
+    max-width: 534px;
+    font-size: 50px;
+    line-height: 1.24;
+    text-transform: none;
+
+    @include mq(tablet-lg) {
+      font-size: 40px;
+    }
+
+    @include mq(smallest) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 30px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 24px;
+    max-width: 424px;
+  }
+
+  @include mq(tablet-lg) {
+    padding-top: 200px;
+    background-position: 75% 0;
+  }
+
+  @include mq(small) {
+    padding-top: 150px;
+  }
+
+  @include mq(smaller) {
+    padding-top: 120px;
+  }
+}

@@ -1,0 +1,81 @@
+.contact {
+  min-height: 624px;
+  color: var(--color-text-secondary);
+  background-color: var(--color-section-bg-dark);
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    margin-right: 20px;
+    padding: 50px 0 50px 82px;
+    width: 49%;
+
+    @include mq(desktop-sm) {
+      margin-right: 0;
+      padding: 50px 30px;
+      width: 100%;
+    }
+
+    @include mq(smaller) {
+      padding: 40px 10px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 22px;
+
+    @include mq(smaller) {
+      font-size: 28px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 44px;
+    max-width: 460px;
+    color: rgba(#fff, 0.6);
+
+    @include mq(smaller) {
+      font-size: 16px;
+    }
+  }
+
+  &__map {
+    max-width: 51%;
+  }
+}
+
+.contact-form {
+  &__input {
+    display: block;
+    margin-bottom: 32px;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+    padding: 0 12px 7px 0;
+    width: 100%;
+    color: #f6ede9;
+    background-color: transparent;
+
+    &::placeholder {
+      color: #f6ede9;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-light-pink);
+    }
+  }
+
+  &__btn {
+    padding: 24px 73px 25px 70px;
+ 
+    @include mq(small) {
+      padding: 24px 30px 25px 30px;
+      min-width: 100%;
+    }
+  }
+}

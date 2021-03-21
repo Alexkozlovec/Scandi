@@ -1,0 +1,154 @@
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
+
+.reviews {
+  padding: var(--section-y-padding) 0;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 22px;
+    padding-left: 20px;
+    text-align: center;
+
+    @include mq(tablet) {
+      padding-left: 0;
+    }
+  }
+}
+
+.reviews-arrows {
+  &__arrow {
+    position: absolute;
+    top: 42%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    background-color: var(--color-light-pink);
+    transition: var(--transition);
+    transition-property: opacity, width, height;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--prev {
+      left: 82px;
+
+      svg {
+        transform: rotateY(180deg);
+      }
+
+      @include mq(desktop-md) {
+        left: 0;
+      }
+
+      @include mq(small) {
+        margin-right: 20px;
+      }
+    }
+
+    &--next {
+      right: 82px;
+
+      @include mq(desktop-md) {
+        right: 0;
+      }
+    }
+
+    @include mq(desktop-sm) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include mq(tablet) {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        height: auto;
+      }
+    }
+
+    @include mq(small) {
+      position: static;
+    }
+  }
+
+  @include mq(small) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.review {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 184px;
+  cursor: grab;
+
+  @include mq(desktop-md) {
+    padding: 0 100px;
+  }
+
+  @include mq(tablet-lg) {
+    flex-direction: column;
+    padding: 0 80px;
+  }
+
+  @include mq(small) {
+    padding: 0;
+  }
+
+  &__desc {
+    margin: 0;
+    padding-top: 90px;
+    max-width: 405px;
+
+    @include mq(tablet-lg) {
+      padding-top: 20px;
+      max-width: 100%;
+    }
+  }
+
+  &__text:not(:last-child) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__author {
+    text-transform: uppercase;
+  }
+
+  &__gallery {
+    max-width: 405px;
+
+    @include mq(tablet-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+  }
+
+  &__image {
+    display: block;
+    height: 272px;
+    object-fit: cover;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @include mq(tablet-lg) {
+      width: 49%;
+      height: auto;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

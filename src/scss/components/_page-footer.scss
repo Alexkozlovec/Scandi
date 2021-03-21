@@ -1,0 +1,42 @@
+.page-footer {
+  padding: 33px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    @include mq(desktop-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__phone {
+    margin-right: 42px;
+    font-size: 18px;
+    color: inherit;
+
+    @include mq(desktop-sm) {
+      padding: 4px;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+
+    @include mq(desktop-sm) {
+      padding: 4px;
+    }
+  }
+
+  &__meta {
+    align-self: flex-start;
+    margin: 0;
+    margin-left: auto;
+  }
+}

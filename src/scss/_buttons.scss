@@ -1,0 +1,92 @@
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 24px 67px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--color-text-primary);
+  background-color: var(--color-light-pink);
+  transition: var(--transition);
+  transition-property: color, background-color, opacity;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-text-primary);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @include mq(tablet-lg) {
+    padding: 20px 50px;
+  }
+}
+
+.btn-burger {
+  position: fixed;
+  right: 20px;
+  top: 24px;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-light-pink);
+
+  &__line {
+    position: relative;
+    background-color: var(--color-white);
+  }
+
+  &__line::before {
+    top: -6px;
+  }
+
+  &__line::after {
+    bottom: -6px;
+  }
+
+  &.active {
+    background-color: var(--color-white);
+
+    .btn-burger__line {
+      background-color: var(--color-light-pink);
+      transform: translateX(-150%);
+    }
+
+    .btn-burger__line::before {
+      opacity: 1;
+      transform: translate(150%, 6px) rotate(45deg);
+    }
+
+    .btn-burger__line::after {
+      opacity: 1;
+      transform: translate(150%, -6px) rotate(-45deg);
+    }
+  }
+
+  &__line::before,
+  &__line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: inherit;
+  }
+
+  &__line,
+  &__line::before,
+  &__line::after {
+    border-radius: 1px;
+    width: 22px;
+    height: 2px;
+    transition: var(--transition);
+    transition-property: transform, opacity;
+  }
+}
