@@ -14,7 +14,7 @@
   <header class="page-header">
     <div class="container page-header__container">
 
-      <button class="nav__burger btn-burger" type="button">
+      <button class="nav__burger btn-burger" type="button" aria-label="Открыть меню">
         <span class="btn-burger__line"></span>
       </button>
 
@@ -44,7 +44,7 @@
           </li>
         </ul>
 
-        <a href="tel:+79818574624" class="link page-header__phone">+7 (981) 857-46-24</a>
+        <a href="tel:+79818574624" class="link page-header__phone" aria-label="Контактный номер телефона +7 (981) 857-46-24">+7 (981) 857-46-24</a>
       </nav>
     </div>
   </header>
@@ -54,7 +54,7 @@
   <main class="page-main">
     <section class="hero">
       <div class="container hero__container">
-        <div class="hero__content">
+        <div class="hero__content" data-reveal="true">
           <h1 class="title hero__title" data-reveal="true">Поможем сделать вашу квартиру уютнее</h1>
 
           <p class="desc hero__desc">
@@ -63,7 +63,7 @@
             <br>и помогаем организовать доставку
           </p>
 
-          <a href="#contact" class="btn hero__cta">Оставить заявку</a>
+          <a href="#contact" class="btn hero__cta" aria-label="Перейти к форме обратной связи">Оставить заявку</a>
         </div>
       </div>
     </section>
@@ -93,6 +93,7 @@
     </section>
 
     <section id="features" class="features">
+      <h2 class="visually-hidden">Наши преимущества</h2>
       <dl class="features__list container list-reset">
         <div class="feature features__item" data-reveal="true">
           <dt class="feature__term">5</dt>
@@ -165,21 +166,21 @@
 
         <ul class="team__list list-reset">
           <li class="team-card team__item">
-            <img src="images/team/masha.jpg" alt="Маша – главный дизайнер" class="team-card__image">
+            <img src="images/team/team-1.jpg" alt="Маша – главный дизайнер" class="team-card__image">
             <p class="desc team-card__desc">
               Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам домой, общается
               и помогает сделать вашу квартиру красивой и уютной.
             </p>
           </li>
           <li class="team-card team__item">
-            <img src="images/team/sasha.jpg" alt="Саша – менеджер" class="team-card__image">
+            <img src="images/team/team-2.jpg" alt="Саша – менеджер" class="team-card__image">
             <p class="desc team-card__desc">
               С нашим менеджером Сашей вы познакомитесь в первую очередь. Она проконсультирует вас, соберёт все документы
               и ответит на все вопросы.
             </p>
           </li>
           <li class="team-card team__item">
-            <img src="images/team/kate.jpg" alt="Катя – дизайнер" class="team-card__image">
+            <img src="images/team/team-3.jpg" alt="Катя – дизайнер" class="team-card__image">
             <p class="desc team-card__desc">
               Катя тоже занимается дизайном.
               Она всегда находит общий язык
@@ -194,28 +195,28 @@
 
             <ol class="process__list list-reset">
               <li class="process-card process__item">
-                <span class="process-card__step">1</span>
+                <span class="process-card__step"></span>
                 <p class="desc process-card__desc">
                   Знакомимся, выезжаем
                   на объект, утверждаем концепцию, подписывем договор.
                 </p>
               </li>
               <li class="process-card process__item">
-                <span class="process-card__step">2</span>
+                <span class="process-card__step"></span>
                 <p class="desc process-card__desc">
                   Подбираем мебель, текстиль, аксессуры. Делаем 3D-
                   зуализацию.
                 </p>
               </li>
               <li class="process-card process__item">
-                <span class="process-card__step">3</span>
+                <span class="process-card__step"></span>
                 <p class="desc process-card__desc">
                   Находим нужные магазины, помогаем с доставкой
                   и оплатой товаров.
                 </p>
               </li>
               <li class="process-card process__item">
-                <span class="process-card__step">4</span>
+                <span class="process-card__step"></span>
                 <p class="desc process-card__desc">
                   Воплощаем проект в жизнь:
                   расставляем мебель и цветы, вешаем шторы, находим места для мелочей
@@ -342,7 +343,8 @@
         </div>
 
         <div class="map contact__map">
-          карта
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616006086!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1616337863840!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
@@ -353,7 +355,7 @@
   <footer class="page-footer">
     <div class="container page-footer__container">
       <div class="page-footer__info">
-        <a href="tel:+79818574624" class="link page-footer__phone">+7 (981) 857-46-24</a>
+        <a href="tel:+79818574624" class="link page-footer__phone" aria-label="Контактный номер теелфона +7 (981) 857-46-24">+7 (981) 857-46-24</a>
         <address class="page-footer__address">г. Санкт-петербург, ул. Большая Конюшенная, 19</address>
       </div>
 

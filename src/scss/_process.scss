@@ -1,43 +1,3 @@
-.team {
-  padding: 50px 0 64px;
-  background-color: var(--color-section-bg);
-
-  &__title {
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px 6% 10px;
-  }
-
-  &__item {
-    flex: 1 1 320px;
-    margin-bottom: 20px;
-    padding: 0 1.5%;
-  }
-}
-
-.team-card {
-  max-width: 400px;
-  text-align: center;
-
-  &__image {
-    display: block;
-    width: 100%;
-    height: 253px;
-    object-fit: cover;
-  }
-
-  &__desc {
-    margin: 10px 0;
-  }
-}
-
 .process {
   &__title {
     margin: 0;
@@ -51,8 +11,10 @@
   }
 
   &__list {
+    counter-reset: step;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     @include mq(tablet-lg) {
       margin: 0 auto;
@@ -60,6 +22,7 @@
     }
 
     @include mq(tablet) {
+      justify-content: initial;
       width: 100%;
     }
   }
@@ -68,6 +31,10 @@
     width: 25%;
 
     @include mq(tablet-lg) {
+      width: calc(100% / 3);
+    }
+
+    @include mq(tablet) {
       width: 50%;
 
       &:nth-child(2n) {
@@ -103,6 +70,11 @@
     line-height: 1;
     color: var(--color-white);
     background-color: var(--color-section-bg-dark);
+
+    &::after {
+      counter-increment: step;
+      content: counter(step);
+    }
   }
 
   &__desc {

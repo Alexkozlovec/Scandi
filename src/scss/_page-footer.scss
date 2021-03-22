@@ -4,6 +4,10 @@
   &__container {
     display: flex;
     align-items: center;
+
+    @include mq(tablet) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -14,15 +18,25 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
+    @include mq(tablet) {
+      align-items: center;
+    }
   }
 
   &__phone {
     margin-right: 42px;
+    min-width: max-content;
     font-size: 18px;
     color: inherit;
 
     @include mq(desktop-sm) {
       padding: 4px;
+    }
+
+    @include mq(tablet) {
+      margin-right: 0;
+      margin-bottom: 5px;
     }
   }
 
@@ -30,7 +44,9 @@
     font-style: normal;
 
     @include mq(desktop-sm) {
+      margin-bottom: 5px;
       padding: 4px;
+      text-align: center;
     }
   }
 
@@ -38,5 +54,15 @@
     align-self: flex-start;
     margin: 0;
     margin-left: auto;
+    min-width: max-content;
+
+    @include mq(tablet) {
+      align-self: center;
+      margin: 0 auto;
+    }
+  }
+
+  @include mq(small) {
+    font-size: 16px;
   }
 }

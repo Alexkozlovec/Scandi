@@ -46,6 +46,11 @@ const html = () => {
     .pipe(gulpif(!isProd, browserSync.stream()));
 };
 
+const htmlBackend = () => {
+  return src(srcPath + "*.html")
+  .pipe(dest(distPath));
+}
+
 const images = () => {
   return src(srcPath + "images/**/*")
   .pipe(gulpif(isProd, imagemin([
@@ -80,24 +85,39 @@ const assets = () => {
 
 const styles = () => {
   return src(srcPath + "scss/style.scss")
-  .pipe(gulpif(!isProd, plumber()))
-  .pipe(gulpif(!isProd, sourcemaps.init()))
-  .pipe(sass())
-  .pipe(postcss([autoprefixer()]))
-  .pipe(gulpif(!isProd, sourcemaps.write(".")))
-  .pipe(gulpif(isProd, gcmq()))
-  .pipe(gulpif(isProd, cssnano({
-      zindex: false,
-      discardComments: {
-        removeAll: true,
-      },
-  })))
-  .pipe(dest(distPath + "css/"))
-  .pipe(gulpif(!isProd, browserSync.stream()))
+    .pipe(gulpif(!isProd, plumber()))
+    .pipe(gulpif(!isProd, sourcemaps.init()))
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulpif(!isProd, sourcemaps.write(".")))
+    .pipe(gulpif(isProd, gcmq()))
+    .pipe(
+      gulpif(
+        isProd,
+        cssnano({
+          zindex: false,
+          discardComments: {
+            removeAll: true,
+          },
+        })
+      )
+    )
+    .pipe(dest(distPath + "css/"))
+    .pipe(gulpif(!isProd, browserSync.stream()));
+}
+
+const stylesBackend = () => {
+  return src(srcPath + "scss/style.scss")
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gcmq())
+    .pipe(dest(distPath + "css/"));
 }
 
 const scripts = () => {
-  return src(srcPath + "scripts/*.js")
+  return src(srcPath + "scripts/**/*.js")
   .pipe(gulpif(
     isProd,
     webpackStream({
@@ -154,6 +174,8 @@ const setProd = (cb) => {
 const watcher = parallel(watchFiles, serve);
 
 exports.default = series(cleanDist, parallel(html, fonts, images, assets, styles, scripts), watcher /*convertToWebp */);
+
+exports.backend = series(setProd, cleanDist, parallel(htmlBackend, fonts, images, assets, stylesBackend, scripts));
 
 exports.build = series(setProd, cleanDist, parallel(html, fonts, images, assets, styles, scripts));
 // exports

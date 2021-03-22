@@ -2,6 +2,7 @@
 
 .reviews {
   padding: var(--section-y-padding) 0;
+  padding-bottom: 47px;
 
   &__title {
     margin: 0;
@@ -89,19 +90,6 @@
   padding: 0 184px;
   cursor: grab;
 
-  @include mq(desktop-md) {
-    padding: 0 100px;
-  }
-
-  @include mq(tablet-lg) {
-    flex-direction: column;
-    padding: 0 80px;
-  }
-
-  @include mq(small) {
-    padding: 0;
-  }
-
   &__desc {
     margin: 0;
     padding-top: 90px;
@@ -113,7 +101,7 @@
     }
   }
 
-  &__text:not(:last-child) {
+  &__text {
     margin: 0;
     margin-bottom: 30px;
   }
@@ -135,20 +123,31 @@
 
   &__image {
     display: block;
+    margin-bottom: 24px;
     height: 272px;
     object-fit: cover;
 
-    &:not(:last-child) {
-      margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
     }
 
     @include mq(tablet-lg) {
+      margin-bottom: 0;
       width: 49%;
       height: auto;
-
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
     }
+  }
+
+  @include mq(desktop-md) {
+    padding: 0 100px;
+  }
+
+  @include mq(tablet-lg) {
+    flex-direction: column;
+    padding: 0 80px;
+  }
+
+  @include mq(small) {
+    padding: 0;
   }
 }

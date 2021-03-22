@@ -1,0 +1,110 @@
+.page-html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.page-body {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 320px;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size-primary);
+  line-height: var(--line-height-primary);
+  color: var(--color-text-primary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-page-bg);
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1230px;
+}
+
+.link {
+  font-size: var(--font-size-secondary);
+  line-height: 19px;
+  transition: var(--transition);
+  transition-property: color;
+
+  @include mq(tablet, min) {
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  @include mq(tablet-lg, min) {
+    &:hover {
+      color: var(--color-light-pink);
+    }
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
+  text-transform: uppercase;
+
+  &.anim {
+    animation: show 700ms ease-in-out forwards;
+  }
+
+  @include mq(small) {
+    font-size: 30px;
+  }
+}

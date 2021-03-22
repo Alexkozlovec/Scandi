@@ -1,0 +1,26 @@
+:root {
+  // color
+  --color-white: #fff;
+  --color-black: #000;
+  --color-page-bg: #efe6e4;
+  --color-section-bg: #e2c4ba;
+  --color-section-bg-dark: #8d7370;
+  --color-text-primary: #533738;
+  --color-text-secondary: var(--color-white);
+  --color-text-light: #f6ede9;
+  --color-light-pink: #cc8b86;
+
+  // font
+  --font-primary: "Montserrat", "Arial", sans-serif;
+  --font-size-primary: 18px;
+  --font-size-secondary: 16px;
+  --font-size-title: 40px;
+  --line-height-primary: 1.67;
+  --line-height-title: 1.25;
+
+  // values
+  --section-y-padding: 65px;
+
+  // effects
+  --transition: 300ms ease-in-out;
+}

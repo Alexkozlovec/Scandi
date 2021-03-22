@@ -32,4 +32,4 @@ window.addEventListener("resize", () => {
     enableScroll();
     setOpacity(navItems, 1);
   }
-})
+});

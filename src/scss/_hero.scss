@@ -1,7 +1,7 @@
 .hero {
   padding: 152px 0 90px;
   min-height: 715px;
-  background-image: url("../../images/hero-bg.jpg");
+  background-image: url("../images/hero-bg.jpg");
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,6 +10,10 @@
   &__content {
     padding-left: 84px;
     transition: padding-left var(--transition);
+
+    &.anim {
+      animation: fadeInFromLeft 500ms ease-in-out forwards;
+    }
 
     @include mq(tablet-lg) {
       padding-left: 42px;
