@@ -1,3 +1,53 @@
+@use "sass:map";
+
+$breakpoints: (
+  smallest: 376px,
+  smaller: 415px,
+  small: 576px,
+  tablet: 768px,
+  tablet-lg: 1024px,
+  desktop-sm: 992px,
+  desktop-md: 1200px,
+  desktop-lg: 1400px,
+);
+
+// mixins
+
+@mixin mq($key, $from: max) {
+  $size:
+    map-get(
+      $map: $breakpoints,
+      $key: $key,
+    );
+
+  @media (#{$from}-width: $size) {
+    @content;
+  }
+}
+
+@mixin font-face($name, $url, $weight, $style: normal) {
+  @font-face {
+    src:
+      url("#{$url}.woff2") format("woff2"),
+      url("#{$url}.woff") format("woff");
+    font-family: $name;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin list-reset() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// fonts
+
+@include font-face("Montserrat", "../fonts/Montserrat-Regular", 400);
+@include font-face("Montserrat", "../fonts/Montserrat-Medium", 500);
+
 .page-html {
   height: 100%;
   box-sizing: border-box;
@@ -61,12 +111,6 @@ input {
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-.list-reset {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .container {

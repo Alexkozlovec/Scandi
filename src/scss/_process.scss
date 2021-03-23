@@ -11,6 +11,8 @@
   }
 
   &__list {
+    @include list-reset;
+
     counter-reset: step;
     display: flex;
     flex-wrap: wrap;

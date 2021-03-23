@@ -53,6 +53,11 @@
     @media (max-width: 360px) {
       font-size: 30px;
     }
+
+    @media (max-height: 415px) {
+      margin-bottom: 18px;
+      font-size: 28px;
+    }
   }
 
   &__desc {
@@ -72,5 +77,10 @@
 
   @include mq(smaller) {
     padding-top: 120px;
+  }
+
+  @media (max-height: 415px) {
+    padding-top: 100px;
+    min-height: 500px;
   }
 }

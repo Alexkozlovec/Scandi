@@ -55,7 +55,7 @@ const images = () => {
   return src(srcPath + "images/**/*")
   .pipe(gulpif(isProd, imagemin([
       imagemin.gifsicle({ interlaced: true }),
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.mozjpeg({ quality: 85, progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo({
         plugins: [{ removeViewBox: true }, { cleanupIDs: false }],

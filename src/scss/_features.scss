@@ -4,9 +4,12 @@
   background-color: var(--color-section-bg-dark);
 
   &__list {
+    @include list-reset;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
   }
 
   &__item {
